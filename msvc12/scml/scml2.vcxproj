@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CAEE957D-FF52-425C-886D-478DB00A97ED}</ProjectGuid>
+    <RootNamespace>scml2</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+<PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+<PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+<PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+<PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/vmg /FS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../src; $(SYSTEMC)/../src; %(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)scml2.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>/vmg /FS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../src; $(SYSTEMC)/../src; %(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)scml2.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/vmg /FS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../../src; $(SYSTEMC)/../src; %(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;NOMINMAX;HOST_X86;DEBUG32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>.\obj\$(Configuration)_vc8/</AssemblerListingLocation>
+      <ObjectFileName>.\obj\$(Configuration)_vc8/</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\$(Configuration)_vc8/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)scml2.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>/vmg /FS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../../src; $(SYSTEMC)/../src; %(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;NOMINMAX;HOST_X86;DEBUG32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>.\obj\$(Configuration)_vc8/</AssemblerListingLocation>
+      <ObjectFileName>.\obj\$(Configuration)_vc8/</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\$(Configuration)_vc8/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)scml2.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  <!-- ccfiles -->
+    <ClCompile Include="..\..\src\scml2\abstraction_level_switch.cc" />
+    <ClCompile Include="..\..\src\scml2\bitfield.cc" />
+    <ClCompile Include="..\..\src\scml2\bitfield_base.cc" />
+    <ClCompile Include="..\..\src\scml2\bitfield_container.cc" />
+    <ClCompile Include="..\..\src\scml2\bitfield_callback_observers.cc" />
+    <ClCompile Include="..\..\src\scml2\bitfield_disallow_debug_read_access_callback.cc" />
+    <ClCompile Include="..\..\src\scml2\bitfield_disallow_debug_write_access_callback.cc" />
+    <ClCompile Include="..\..\src\scml2\bitfield_disallow_read_access_callback.cc" />
+    <ClCompile Include="..\..\src\scml2\bitfield_disallow_write_access_callback.cc" />
+    <ClCompile Include="..\..\src\scml2\burst_unroller.cc" />
+    <ClCompile Include="..\..\src\scml2\callback_observers.cc" />
+    <ClCompile Include="..\..\src\scml2\debug_burst_unroller.cc" />
+    <ClCompile Include="..\..\src\scml2\dmi_handler.cc" />
+    <ClCompile Include="..\..\src\scml2\mapped_ranges_observers.cc" />
+    <ClCompile Include="..\..\src\scml2\memory.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_alias.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_base.cc" />
+    <ClCompile Include="..\..\src\scml2\restriction_owner.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_bitfields_debug_read_callback.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_bitfields_debug_write_callback.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_bitfields_read_callback.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_bitfields_write_callback.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_content_observers.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_disallow_access_callback.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_disallow_debug_access_callback.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_dmi.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_heap_storage.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_region.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_region_registry.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_storage_base.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_storage_creator.cc" />
+    <ClCompile Include="..\..\src\scml2\reg.cc" />
+    <ClCompile Include="..\..\src\scml2\router.cc" />
+    <ClCompile Include="..\..\src\scml2\router_base.cc" />
+    <ClCompile Include="..\..\src\scml2\status.cc" />
+    <ClCompile Include="..\..\src\scml2\status_registry.cc" />
+    <ClCompile Include="..\..\src\scml2\symbolic_names.cc" />
+    <ClCompile Include="..\..\src\scml2\tagged_message_handler.cc" />
+    <ClCompile Include="..\..\src\scml2\timing_annotation_registry.cc" />
+    <ClCompile Include="..\..\src\scml2\toplevel_memory_base.cc" />
+    <ClCompile Include="..\..\src\scml2\word_access_unroller_base.cc" />
+    <ClCompile Include="..\..\src\scml2\word_adapter_base.cc" />
+    <ClCompile Include="..\..\src\scml2\tlm2_gp_mm_dispatcher.cc" />
+    <ClCompile Include="..\..\src\scml2\clocked_callback.cc" />
+    <ClCompile Include="..\..\src\scml2\clocked_event.cc" />
+    <ClCompile Include="..\..\src\scml2\clocked_peq_container_impl.cc" />
+    <ClCompile Include="..\..\src\scml2\clocked_timer.cc" />
+    <ClCompile Include="..\..\src\scml2\tlm2_gp_target_adapter.cc" />
+    <ClCompile Include="..\..\src\scml2\memory_put_callback_base.cc" />
+  </ItemGroup>
+  <ItemGroup>
+  <!-- hfiles -->
+    <ClInclude Include="..\..\src\scml2\abstraction_level_switch_observer.h" />
+    <ClInclude Include="..\..\src\scml2\autosync_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_access_restriction_b.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_access_restriction_base.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_default_restriction.h" />
+    <ClInclude Include="..\..\src\scml2\memory_access_restriction_base.h" />
+    <ClInclude Include="..\..\src\scml2\memory_null_access_restriction.h" />
+    <ClInclude Include="..\..\src\scml2\memory_default_access_restriction.h" />
+    <ClInclude Include="..\..\src\scml2\memory_restriction.h" />
+    <ClInclude Include="..\..\src\scml2\restriction_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\restriction_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\ignore_restriction_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\error_restriction_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\word_restriction_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\word_restriction_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\only_word_restriction_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\write_once_restriction_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\memory_restriction_functions_include.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_restriction.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_restriction_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_restriction_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_restriction_functions_include.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_container.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_autosync_read_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_autosync_write_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_base.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_callback_functions.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_callback_functions_include.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_callback_observer.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_callback_observer_owner.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_callback_observers.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_callback_functions.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_mask_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_mask_read_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_mask_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_mask_write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_read_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_read_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_read_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_write_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_debug_write_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_default_read_behavior_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_default_write_behavior_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_disallow_debug_read_access_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_disallow_debug_write_access_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_disallow_read_access_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_disallow_write_access_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_enum_post_write_decoder.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_mask_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_mask_read_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_mask_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_mask_write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_neversync_read_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_neversync_write_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_null_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_on_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_post_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_post_write_old_new_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_post_write_old_new_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_post_write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_autosync_post_write_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_default_post_write_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_neversync_post_write_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_post_write_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_post_write_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_selfsync_post_write_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_read_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_read_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_read_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_selfsync_read_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_selfsync_write_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_set_on_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_store_after_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_untimed_mask_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_untimed_mask_read_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_untimed_mask_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_untimed_mask_write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_untimed_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_untimed_read_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_untimed_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_untimed_write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_write_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_write_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_write_once_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\burst_unroller.h" />
+    <ClInclude Include="..\..\src\scml2\callback_macro.h" />
+    <ClInclude Include="..\..\src\scml2\callback_observer.h" />
+    <ClInclude Include="..\..\src\scml2\callback_observer_owner.h" />
+    <ClInclude Include="..\..\src\scml2\callback_observers.h" />
+    <ClInclude Include="..\..\src\scml2\set_on_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\debug_burst_unroller.h" />
+    <ClInclude Include="..\..\src\scml2\debug_callback.h" />
+    <ClInclude Include="..\..\src\scml2\debug_transport_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\debug_transport_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\default_behavior_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\dmi_handler.h" />
+    <ClInclude Include="..\..\src\scml2\filter_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\initiator_socket.h" />
+    <ClInclude Include="..\..\src\scml2\severity.h" />
+    <ClInclude Include="..\..\src\scml2\mappable_if.h" />
+    <ClInclude Include="..\..\src\scml2\mapped_range.h" />
+    <ClInclude Include="..\..\src\scml2\mapped_ranges_observer.h" />
+    <ClInclude Include="..\..\src\scml2\mapped_ranges_observer_owner.h" />
+    <ClInclude Include="..\..\src\scml2\mapped_ranges_observers.h" />
+    <ClInclude Include="..\..\src\scml2\memory.h" />
+    <ClInclude Include="..\..\src\scml2\memory_alias.h" />
+    <ClInclude Include="..\..\src\scml2\memory_base.h" />
+    <ClInclude Include="..\..\src\scml2\restriction_owner.h" />
+    <ClInclude Include="..\..\src\scml2\memory_behavior_functions.h" />
+    <ClInclude Include="..\..\src\scml2\memory_callback.h" />
+    <ClInclude Include="..\..\src\scml2\memory_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\memory_callback_functions.h" />
+    <ClInclude Include="..\..\src\scml2\memory_callback_functions_include.h" />
+    <ClInclude Include="..\..\src\scml2\memory_const_iterator.h" />
+    <ClInclude Include="..\..\src\scml2\memory_content_observer.h" />
+    <ClInclude Include="..\..\src\scml2\memory_content_observer_owner.h" />
+    <ClInclude Include="..\..\src\scml2\memory_content_observers.h" />
+    <ClInclude Include="..\..\src\scml2\memory_debug_callback.h" />
+    <ClInclude Include="..\..\src\scml2\memory_debug_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\memory_debug_callback_functions.h" />
+    <ClInclude Include="..\..\src\scml2\memory_disallow_access_callback.h" />
+    <ClInclude Include="..\..\src\scml2\memory_disallow_debug_access_callback.h" />
+    <ClInclude Include="..\..\src\scml2\memory_dmi.h" />
+    <ClInclude Include="..\..\src\scml2\memory_fast_access.h" />
+    <ClInclude Include="..\..\src\scml2\memory_fast_access_impl.h" />
+    <ClInclude Include="..\..\src\scml2\memory_index_reference.h" />
+    <ClInclude Include="..\..\src\scml2\memory_iterator.h" />
+    <ClInclude Include="..\..\src\scml2\memory_iterator_base.h" />
+    <ClInclude Include="..\..\src\scml2\memory_region.h" />
+    <ClInclude Include="..\..\src\scml2\memory_region_registry.h" />
+    <ClInclude Include="..\..\src\scml2\memory_select_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\memory_select_callback.h" />
+    <ClInclude Include="..\..\src\scml2\memory_slow_access_base.h" />
+    <ClInclude Include="..\..\src\scml2\neversync_callback.h" />
+    <ClInclude Include="..\..\src\scml2\null_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\on_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\pair_signal.h" />
+    <ClInclude Include="..\..\src\scml2\pin_callback.h" />
+    <ClInclude Include="..\..\src\scml2\pin_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\pin_callback_functions.h" />
+    <ClInclude Include="..\..\src\scml2\pin_callback_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\post_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\post_write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\quantumkeeper_if.h" />
+    <ClInclude Include="..\..\src\scml2\quantumkeeper_wrapper.h" />
+    <ClInclude Include="..\..\src\scml2\read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\read_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\read_extensions_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\read_extensions_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\reg.h" />
+    <ClInclude Include="..\..\src\scml2\reg_vector_creator.h" />
+    <ClInclude Include="..\..\src\scml2\resource.h" />
+    <ClInclude Include="..\..\src\scml2\router.h" />
+    <ClInclude Include="..\..\src\scml2\router_base.h" />
+    <ClInclude Include="..\..\src\scml2\router_callback.h" />
+    <ClInclude Include="..\..\src\scml2\router_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\router_callback_functions.h" />
+    <ClInclude Include="..\..\src\scml2\router_debug_callback.h" />
+    <ClInclude Include="..\..\src\scml2\router_debug_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\router_debug_callback_functions.h" />
+    <ClInclude Include="..\..\src\scml2\scoped_reference.h" />
+    <ClInclude Include="..\..\src\scml2\vector.h" />
+    <ClInclude Include="..\..\src\scml2\selfsync_callback.h" />
+    <ClInclude Include="..\..\src\scml2\status.h" />
+    <ClInclude Include="..\..\src\scml2\status_observer.h" />
+    <ClInclude Include="..\..\src\scml2\status_observer_owner.h" />
+    <ClInclude Include="..\..\src\scml2\status_registry.h" />
+    <ClInclude Include="..\..\src\scml2\store_after_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\stream.h" />
+    <ClInclude Include="..\..\src\scml2\streams.h" />
+    <ClInclude Include="..\..\src\scml2\symbolic_names.h" />
+    <ClInclude Include="..\..\src\scml2\thread_pool.h" />
+    <ClInclude Include="..\..\src\scml2\timing_annotation_registry.h" />
+    <ClInclude Include="..\..\src\scml2\tlm2_gp_extensions.h" />
+    <ClInclude Include="..\..\src\scml2\tlm2_gp_initiator_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\tlm2_gp_initiator_adapter_vector_creator.h" />
+    <ClInclude Include="..\..\src\scml2\tlm2_gp_target_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\tlm2_gp_default_mm.h" />
+    <ClInclude Include="..\..\src\scml2\tlm2_gp_default_mm_creator.h" />
+    <ClInclude Include="..\..\src\scml2\tlm2_gp_mm_dispatcher.h" />
+    <ClInclude Include="..\..\src\scml2\tlm2_gp_mm_ifs.h" />
+    <ClInclude Include="..\..\src\scml2\toplevel_memory_base.h" />
+    <ClInclude Include="..\..\src\scml2\transport_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\transport_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\trigger_signal.h" />
+    <ClInclude Include="..\..\src\scml2\types.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_read_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_read_extensions_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_read_extensions_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_transport_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_transport_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_word_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_word_read_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_word_read_extensions_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_word_read_extensions_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_word_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_word_write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_word_write_extensions_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_word_write_extensions_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_write_extensions_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\untimed_write_extensions_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\utils.h" />
+    <ClInclude Include="..\..\src\scml2\word_access_unroller.h" />
+    <ClInclude Include="..\..\src\scml2\word_access_unroller_base.h" />
+    <ClInclude Include="..\..\src\scml2\word_adapter_base.h" />
+    <ClInclude Include="..\..\src\scml2\word_read_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\word_read_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\word_read_extensions_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\word_read_extensions_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\word_write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\word_write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\word_write_extensions_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\word_write_extensions_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\write_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\write_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\write_extensions_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\write_extensions_adapter_tagged.h" />
+    <ClInclude Include="..\..\src\scml2\write_once_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\write_once_state.h" />
+    <ClInclude Include="..\..\src\scml2\clocked_module.h" />
+    <ClInclude Include="..\..\src\scml2\clocked_callback.h" />
+    <ClInclude Include="..\..\src\scml2\clocked_event.h" />
+    <ClInclude Include="..\..\src\scml2\clocked_peq_container_impl.h" />
+    <ClInclude Include="..\..\src\scml2\clocked_peq_container.h" />
+    <ClInclude Include="..\..\src\scml2\clocked_peq.h" />
+    <ClInclude Include="..\..\src\scml2\clocked_timer.h" />
+    <ClInclude Include="..\..\src\scml2\tagged_message.h" />
+    <ClInclude Include="..\..\src\scml2\tagged_message_macros.h" />
+    <ClInclude Include="..\..\src\scml2\memory_put_callback.h" />
+    <ClInclude Include="..\..\src\scml2\memory_put_callback_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\memory_tagged_put_callback_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_put_callback.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_put_callback_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\bitfield_tagged_put_callback_adapter.h" />
+    <ClInclude Include="..\..\src\scml2\memory_put_callback_base.h" />
+    <ClInclude Include="..\..\src\scml2\memory_put_callback_owner.h" />
+    <ClInclude Include="..\..\src\scml2\memory_put_callback_functions_include.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

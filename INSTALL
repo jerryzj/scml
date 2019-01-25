@@ -1,0 +1,187 @@
+SystemC Modeling Library 2.4.3
+==============================
+
+Test Results
+++++++++++++
+
+The SystemC Modeling Library 2.4.3 has been tested with the GNU C++
+compiler version 4.8.3-64 and 5.2.0-64 on
+  1. RedHat Enterprise Linux 6.6
+     RedHat Enterprise Linux 6.7
+     RedHat Enterprise Linux 7.1
+  2. SUSE Linux Enterprise Server 11 SP1
+     SUSE Linux Enterprise Server 11 SP2
+     SUSE Linux Enterprise Server 11 SP3
+     SUSE Linux Enterprise Server 11 SP4
+     SUSE Linux Enterprise Server 12
+  3. Ubuntu 14.04 LTS
+     Ubuntu 16.04 LTS
+  4. CentOS release 6.6 (Final)
+     CentOS Linux release 7.3.1611 (Core)
+
+and MSVC-12.0-64, MSVC-14.0-64 compiler on
+
+  1. Windows 7
+  2. Windows 8
+  3. Windows 10
+
+Dependencies
+++++++++++++
+
+SystemC Modeling Library (Memory and Bitfields) 2.4.3 depends on
+
+  1. SystemC 2.3.1 
+  2. OSCI TLM 2.0
+
+NOTE SystemC 2.3.1 already contains TLM 2.0
+
+These can be obtained from http://www.accelera.org/
+
+Linux Installation
+++++++++++++++++++
+
+  1. Change to the top level directory (scml-2.4.3)
+
+
+  2. Create a temporary directory, e.g.,
+
+        > mkdir objdir
+
+  3. Change to the temporary directory, e.g.,
+
+        > cd objdir
+
+  4. Set the following environment variable(s):
+
+     For gcc compilers on Linux:
+
+        > setenv CXX g++
+
+  5. Configure the package for your system, e.g.,
+
+        > ../configure --with-systemc=<path_to_SystemC> 
+
+     If you do not specify the path to a SystemC installation, configure will 
+     look in ../systemc. 
+        
+        > ../configure --with-systemc=/usr/local/systemc-2.3.1
+
+     
+     If you do specify the path, use an absolute path (one starting with "/"),
+     and do not use wildcards.
+
+     By default the package will be installed in the top level (scml-2.4.3)
+     directory.
+
+     If you want to install the package elsewhere, use the --prefix option,
+     e.g., 
+
+        > ../configure --prefix=/usr/local/scml \
+                       --with-systemc=/usr/local/systemc-2.3.1
+
+        Note: make sure you have created the target directory before installing
+              the package.
+
+        
+  6. Compile and install the package.
+
+        > gmake install
+
+  7. Test the example suite.
+
+        > gmake check
+
+        Note: make sure the LD_LIBBRARY_PATH is set correctly to find
+        libsystemc-2.3.1.so.
+
+
+
+Note for developers: 
+ 
+  The 'configure' script makes use of the
+  GNU auto-tools `aclocal', `automake', and `autoconf'.
+  Versions of auto-tools used:
+    autoconf (GNU Autoconf) 2.59
+    automake (GNU automake) 1.9.6
+    aclocal (GNU automake) 1.9.6
+
+  If you change something in configure.in, execute
+   aclocal
+   autoconf
+   automake
+   to regenerate the 'configure' script and Makefile.in files.
+
+   
+Windows Installation
+++++++++++++++++++++
+
+  1. Change to the top level directory (scml-2.4.3)
+
+  2. Copy files:
+     msvc12/scml2.h to src/scml2 directory
+     msvc12/scml2_logging.h to src/scml2_logging directory
+     msvc12/scml2_base.h to src/scml2_base directory
+
+  3. Set SYSTEMC environment variable to point to the installation
+     of SystemC e.g.,
+       SYSTEMC=C:\apps\systemc-2.3.1\msvc90
+
+  4. Compile scml2.lib, ModelingObjects.lib, scml2_logging.lib, scml_clock.lib,
+     scml2_base.lib and common scml.lib libraries.
+     Change to the msvc12/scml directory and
+     double-click on 'scml.sln' to launch Visual C++ and select 
+        'Build Solution' under the Build menu to build all libraries.
+        Exit Visual C++.
+        
+  5. Set SCML environment variable to point to the installation location, e.g.,
+       SCML=C:\apps\scml-2.4.3\msvc12
+
+  6. Test the examples:
+     Change to the 'examples' directory, change to the individual example and
+     double-click on the '<examplename>.vcxproj' file.
+     In Visual C++, select 'Build <examplename>' under the 'Build' menu to build
+     the example. 
+     To run the example, select Debug > Start Without debugging or press
+     'Ctrl+F5'.
+     To debug the example, select Debug > Start Debugging or press 'F5'.
+
+  NOTE By default the project files build MultiThreadedDLL and 
+       MultiThreadedDebugDLL runtime libraries.
+       Make sure the libraries are compatible with your SystemC library.
+  NOTE Project files expect the systemc.lib under $(SYSTEMC)\SystemC\Debug or
+       $(SYSTEMC)\SystemC\Release.
+       Make sure the path is correct, if not, adjust the library path to the
+       actual location of the systemc.lib 
+       e.g.: $(SYSTEMC)\SystemC\x64\Debug or $(SYSTEMC)\SystemC\x64\Release.
+
+Creating Windows Applications
+-----------------------------
+
+When creating your own application you need to specify
+  1. Additional Include Directories : 
+    $(SCML)../src/ModelingObjects
+    $(SCML)../src/ModelingObjects/scmlinc
+    $(SCML)../src/scml2
+    $(SCML)../src/scml2_logging
+    $(SCML)../src/scml2_base
+    $(SCML)../src/scml_clock
+    $(SCML)../src/PV
+
+    depending on which include files you use.
+
+  2. Additional Library Directories
+     $(SCML)\scml\Debug
+     or 
+     $(SCML)\scml\Release
+
+  3. Additional Dependencies
+     ModelingObjects.lib
+     scml2.lib
+     scml2_logging.lib
+     scml2_base.lib
+     scml_clock.lib
+     or
+     scml.lib (contains all libraries above)
+
+     depending on which libraries you want to link in.
+

@@ -1,0 +1,29 @@
+            Release Notes for SystemC Modeling Library Release 2.4.3
+            ========================================================
+
+CONTENTS
+========
+
+  1) What's new in this release?
+     
+  2) Incompatibilities with previous releases
+
+  3) Bug fixes
+
+  4) Known Issues
+  
+1) What's new in this release?
+==============================
+
+scml2_base library added.
+Memory access restrictions support added.
+One common scml lib (libscml.a on Linux, scml.lib on Windows) is igenerated
+and installed.
+Minor updates.
+
+2) Incompatibilities with previous releases
+===========================================
+
+No incompatibilities.
+
+

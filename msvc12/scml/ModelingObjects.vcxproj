@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6B01D569-3D6B-47FC-9512-083E96F5B5FD}</ProjectGuid>
+    <RootNamespace>ModelingObjects</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+<PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+<PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+<PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+<PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/vmg /FS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../src; ../../src/ModelingObjects; ../../src/ModelingObjects/scmlinc; $(SYSTEMC)/../src; %(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)ModelingObjects.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalOptions>/vmg /FS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../src; ../../src/ModelingObjects; ../../src/ModelingObjects/scmlinc; $(SYSTEMC)/../src; %(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)ModelingObjects.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/vmg /FS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../../src; ../../src/ModelingObjects; ../../src/ModelingObjects/scmlinc; $(SYSTEMC)/../src; %(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;HOST_X86;DEBUG32;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>.\obj\$(Configuration)_vc8/</AssemblerListingLocation>
+      <ObjectFileName>.\obj\$(Configuration)_vc8/</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\$(Configuration)_vc8/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)ModelingObjects.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalOptions>/vmg /FS %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../../src; ../../src/ModelingObjects; ../../src/ModelingObjects/scmlinc; $(SYSTEMC)/../src; %(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;HOST_X86;DEBUG32;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <AssemblerListingLocation>.\obj\$(Configuration)_vc8/</AssemblerListingLocation>
+      <ObjectFileName>.\obj\$(Configuration)_vc8/</ObjectFileName>
+      <ProgramDataBaseFileName>.\obj\$(Configuration)_vc8/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)ModelingObjects.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_array_base.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_array_notify_if.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_bitfield.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_bitfield_base.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_bitfield_callback_observers.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_bitfield_container.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_callback_observers.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_clock_counter.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_clock_enable.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_divided_clock.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_mapped_ranges_observers.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_base.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_map_facade.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_podt_common.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_bool.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_char.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_sc_biguint_n.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_signed_char.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_signed_int.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_signed_long_int.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_signed_long_long.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_signed_short_int.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_unsigned_char.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_unsigned_int.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_unsigned_long_int.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_unsigned_long_long.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_operations_pts_unsigned_short_int.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_registration.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_user.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_memory_utils.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_property.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_property_registry.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_property_server_if.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_inmemory_property_server.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_router_operations_podt_common.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_router_operations_pts_sc_biguint_n.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_router_operations_pts_unsigned_char.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_router_operations_pts_unsigned_int.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_router_operations_pts_unsigned_long_int.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_router_operations_pts_unsigned_long_long.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_router_operations_pts_unsigned_short_int.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_simple_property_server.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_synchroniser_registry.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_tlm2_initiator_adaptor_base.cc" />
+    <ClCompile Include="..\..\src\ModelingObjects\src\scml_tlm2_target_adaptor_base.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_array.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_array_base.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_array_notify_if.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_bitfield.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_bitfield_base.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_bitfield_callback_observer.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_bitfield_callback_observer_owner.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_bitfield_callback_observers.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_bitfield_container.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_bitfield_container_if.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_callback_observer.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_callback_observer_owner.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_callback_observers.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_clock.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_clock_counter.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_clock_enable.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_clock_gate.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_command_processor.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_divided_clock.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_mapable_if.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_mapable_if_to_T.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_mapped_range.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_mapped_ranges_observer.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_mapped_ranges_observer_owner.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_mapped_ranges_observers.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_algorithm.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_base.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_callback_observer_if.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_index_reference.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_iterator.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_map_facade.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_map_observer_if.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_podt_common.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_bool.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_char.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_double.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_float.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_sc_biguint_n.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_signed_char.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_signed_int.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_signed_long_int.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_signed_long_long.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_signed_short_int.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_unsigned_char.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_unsigned_int.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_unsigned_long_int.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_unsigned_long_long.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_operations_pts_unsigned_short_int.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_pv_if.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_registration.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_user.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memory_utils.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_memsize.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_pool.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_post_if.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_post_port.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_post_PV_transactor.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_post_target_adaptor.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_property.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_property_registry.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_property_server_if.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_inmemory_property_server.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_pv_decoder.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_pv_decoder_port.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_pv_initiator_port.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_pv_multi_port.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_router.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_router_operations.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_router_operations_podt_common.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_router_operations_pts_sc_biguint_n.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_router_operations_pts_unsigned_char.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_router_operations_pts_unsigned_int.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_router_operations_pts_unsigned_long_int.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_router_operations_pts_unsigned_long_long.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_router_operations_pts_unsigned_short_int.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_simple_property_server.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_synchroniser_registry.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_tlm2_initiator_adaptor.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_tlm2_initiator_adaptor_base.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_tlm2_target_adaptor.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_tlm2_target_adaptor_base.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_transaction_request.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_transport_callback.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_transport_if.h" />
+    <ClInclude Include="..\..\src\ModelingObjects\scmlinc\scml_types.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
